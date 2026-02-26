@@ -6,7 +6,6 @@ iterator1 = iter(list1)
 #     print(next(iterator1))
 
 # Задание_2
-
 text = "Python"
 iterator2 = iter(text)
 # while True:
@@ -26,11 +25,6 @@ print(squares)
 
 numbers = [x for x in range(-10, 11) if x % 2 == 0]
 print(numbers)
-#
-# 3. Дан список слов. Создайте новый список,
-# содержащий длины всех слов,
-# используя генератор списков.
-# ===============================================
 
 # Задание_5
 words = ["Python", "PHP", "Swift", "C++"]
@@ -39,7 +33,6 @@ print(words)
 print(len_words)
 
 # Задание_6
-
 list_3 = ["четное" if x % 2 == 0 else "нечетное" for x in range(1, 21)]
 print(list_3)
 
