@@ -223,3 +223,15 @@ print(enter_age)
 sum1 = float(input("Введите сумму покупки: "))
 final_sum = sum1 * 0.9 if sum1 > 5000 else sum1
 print(final_sum)
+
+
+a = int(input("Введи свой балл: "))
+
+if a > 90 and a <= 100:
+    print("Excellent!")
+elif a > 80 and a < 90:
+    print("Good!")
+elif a > 70 and a < 80:
+    print("Bad!")
+else:
+    print("VERY BAD!")
