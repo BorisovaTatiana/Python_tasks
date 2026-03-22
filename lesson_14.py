@@ -1,10 +1,4 @@
-
-# 1. Импортируйте только функции sqrt и pow из модуля math и вычислите:
-# Квадратный корень из 64
-# 5 в степени 3
-# Ожидаемый вывод:
-# 8.0
-# 125.0
+# Задание_1
 
 from math import sqrt, pow
 
@@ -12,12 +6,7 @@ print(sqrt(64))
 print(pow(5, 3))
 
 
-# 2. Импортируйте модуль random и:
-# Выведите случайное число от 1 до 10
-# Выберите случайный элемент из списка [Python, Java, C++]
-# Ожидаемый вывод:
-# Случайное число: 7  # (значение может отличаться)
-# Выбранный язык: Python  # (значение может отличаться)
+# Задание_2
 
 import random
 
@@ -28,36 +17,21 @@ case_num = random.choice(lang)
 print(case_num)
 
 
-# 3. Создайте свой модуль my_module.py, в котором будут функции:
-# add(a, b): складывает два числа
-# multiply(a, b): умножает два числа
-# Пример вызова в другом файле:
-# import my_module
-#
-# print(my_module.add(3, 5))  # 8
-# print(my_module.multiply(4, 6))  # 24
-# Cоздайте my_module.py в той же папке!
+# Задание_3
 
 import my_module
 
+print(my_module.NAME)
 print(my_module.add(3, 5))
 print(my_module.multiply(4, 6))
 
-# 4. Создайте два Python-файла:
-#
-# utils.py – в нем создайте функцию greet(name), которая выводит приветствие.
-# main.py – в нем импортируйте greet() из utils.py и вызовите её.
-# Пример вызова в main.py
+# Задание_4
 
+# main.py
 from utils import greet
 greet("Алексей")  # Привет, Алексей!
 
-# Запустите main.py и убедитесь, что импорт работает!
-
-# 5. Напишите программу, которая измеряет время выполнения
-# кода с помощью time.sleep(2), используя модуль time.
-# Ожидаемый вывод:
-# Код выполнялся 2.0001 сек
+# Задание_5
 
 import time
 start = time.time()
@@ -67,15 +41,16 @@ duration = end - start
 print(duration)
 #  2.0050480365753174 - мой ответ
 
-# 6. Установите библиотеку requests и проверьте, работает ли она.
-# Напишите код, который делает HTTP-запрос и получает данные с сайта:
+# Задание_6
+
 import requests
 
 response = requests.get("https://api.github.com")
-print(response.status_code)  # Должно вывести 200
+print(response.status_code)  # Должно вывести 200 - вывело
 
 
 
+# Задание_7
 
 # 7. Установите библиотеку matplotlib и постройте график.
 # Напишите код:
@@ -94,9 +69,7 @@ plt.show()
 # Удалите один из установленных модулей, например requests
 # Восстановите зависимости с помощью установки из requirements.txt
 
-
-
-
+# Получилось, но не с первого раза =(
 
 # 9. Создание простого пакета
 # Создайте пакет math_operations с модулями:
@@ -111,4 +84,30 @@ plt.show()
 # main.py
 #
 # И запустите обе функции в main.py
+
+
+# main.py (конечный вариант)
+from math_operations import addition
+from package import package_2
+
+from utils import greet
+greet("Алексей")
+
+import package
+
+package.package_1()
+package.package_2()
+
+print(package.NAME)
+
+import math_operations
+
+math_operations.addition(4, 6)
+math_operations.subtraction(4, 6)
+
+print(math_operations.addition(4, 6))
+print(math_operations.subtraction(4, 6))
+print(math_operations.NAME)
+
+
 
